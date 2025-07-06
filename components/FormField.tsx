@@ -29,9 +29,14 @@ const FormField = <T extends FieldValues>({
         control={control}
         render={({ field }) => (
             <FormItem>
-                <FormLabel className='label'>Username</FormLabel>
-                <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+          <FormLabel className="label">{label}</FormLabel>
+          <FormControl>
+            <Input
+              className="input"
+              type={type}
+              placeholder={placeholder}
+              {...field}
+            />
                 </FormControl>
                 <FormDescription>
                     This is your public display name.
